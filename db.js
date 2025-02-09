@@ -5,7 +5,7 @@ const { Client } = require('pg');
 const client = new Client({
   user: process.env.DB_USER,
   host: process.env.DB_HOST,
-  database: 'postgres', // Connect to the default 'postgres' database to create a new DB
+  database: process.env.DATABASE_URL, // Connect to the default 'postgres' database to create a new DB
   password: process.env.DB_PASSWORD,
   port: process.env.DB_PORT,
 });
