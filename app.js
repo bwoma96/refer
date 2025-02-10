@@ -29,7 +29,7 @@ const createTableIfNotExists = async () => {
   }
 };
 
-app.post('/words', async (req, res) => {
+app.post('/', async (req, res) => {
   const { word } = req.body;
   if (!word) {
     return res.status(400).send('Word is required');
